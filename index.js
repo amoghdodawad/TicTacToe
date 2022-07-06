@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded",() =>{
             const b = box[condition[1]];
             const c = box[condition[2]];
             if(a === "" && b === "" && c === "")
-                return;
+                continue;
             if(a === b && b === c){
                 winningStatus = true;
                 gameStatus = false;
@@ -90,7 +90,9 @@ window.addEventListener("DOMContentLoaded",() =>{
         tiles[i].addEventListener("click",()=>{
             if(isValidAction(i) && gameStatus){
                 tiles[i].innerHTML = currentPlayer;
+                console.log(tiles[i].innerHTML)
                 updateBox(i);
+                console.log(box);
                 handleResultValidation();
                 updateCurrentPlayer();
             }
