@@ -1,28 +1,73 @@
 *{
     margin: 0;
     padding: 0;
-    
 }
+
+body{
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 25px;
+    background-color: hsla(220, 15%, 55%,20%);
+}
+
+
+
 .tile-container{
-    height: 300px;
-    width: 300px;
+    height: 280px;
+    width: 280px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
 }
 .tiles{
     display: flex;
-    margin: 0;
+    margin: 2px;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 8px 8px 25px rgba(0,0,0,0.2);
+    background-color: #eeeecd;
 }
 
 .total{
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.dashboard-and-tile-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    border-radius: 20px;
+    background-color: #eae1b4;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.15);
+    height: 500px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    top: 90%;
+    left: 45%;
+    background-color: #eeeecd;
+    border-radius: 10px;
+    box-shadow: 8px 8px 25px rgba(0,0,0,0.2);
+    border: rgba(0, 0, 0, 0);
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
 }
 
 #result{
@@ -30,25 +75,24 @@
     height: 25vh;
     width: 25vw;
     text-align: center;
-    /* align-items: center; */
     justify-content: center;
     margin-top: 2vh;;
 }
 
-.dashboard-and-tile-container{
+#player-X{
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.dashboard-container{
-    margin-left: 30px;
+#player-O{
+    display: flex;
+    justify-content: center;
 }
 
-#reset{
-    display: inline-block;
-    width: 50px;
-    height: 40px;
-    margin: auto;
+table{
+    padding-top: 20px;
+}
+
+th{
+    padding-right: 20px;
 }

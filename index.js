@@ -29,16 +29,20 @@ window.addEventListener("DOMContentLoaded",() =>{
             const a = box[condition[0]];
             const b = box[condition[1]];
             const c = box[condition[2]];
+            
             if(a === "" && b === "" && c === "")
                 continue;
             if(a === b && b === c){
                 winningStatus = true;
                 gameStatus = false;
+                tiles[condition[0]].style.backgroundColor = "#f7cb95";
+                tiles[condition[1]].style.backgroundColor = "#f7cb95";
+                tiles[condition[2]].style.backgroundColor = "#f7cb95";
                 break;
             }
         }
         if(winningStatus){
-            result.innerHTML = "Winner is " + currentPlayer;
+            result.innerHTML =  currentPlayer + " is the Winner";
             if(currentPlayer === "X"){
                 playerX++;
                 document.querySelector("#player-X").innerHTML = playerX;
@@ -77,6 +81,7 @@ window.addEventListener("DOMContentLoaded",() =>{
     function resetTheGame(){
         for(let i=0;i<9;i++){
             tiles[i].innerHTML = "";
+            tiles[i].style.backgroundColor = "#F8F4E3";
             box[i] = "";
             // console.log(box[i]);
         }
