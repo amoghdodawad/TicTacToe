@@ -28,6 +28,10 @@ body{
     background-color: #eeeecd;
 }
 
+.tiles:hover{
+    cursor: pointer;
+}
+
 .total{
     height: 100vh;
     width: 100vw;
@@ -52,6 +56,14 @@ body{
     margin-right: auto;
 }
 
+.reset-container {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #reset{
     display: flex;
     justify-content: center;
@@ -59,8 +71,8 @@ body{
     position: absolute;
     width: 70px;
     height: 40px;
-    top: 90%;
-    left: 45%;
+    /* top: 90%;
+    left: 45%; */
     background-color: #eeeecd;
     border-radius: 10px;
     box-shadow: 8px 8px 25px rgba(0,0,0,0.2);
@@ -68,6 +80,10 @@ body{
     font-family: 'Architects Daughter', sans-serif;
     font-size: 15px;
     font-weight: bolder;
+}
+
+#reset:hover {
+    cursor: pointer;
 }
 
 #result{
